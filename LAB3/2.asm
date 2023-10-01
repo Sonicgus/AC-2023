@@ -9,8 +9,6 @@ main:
     li $t1, 0xFFFF0012
     li $t2, 0xFFFF0014
     la $t3, table
-    
-    li $v0, 3
         
     start:
     li $t4, 1
@@ -19,7 +17,7 @@ main:
     
     sb $t4, ($t1)
     
-    lb $t5, ($t2)
+    lh $t5, ($t2)
     
     bne $t5, $zero, draw
     
@@ -32,6 +30,10 @@ main:
     j start
     
     draw:
+        
+    add $v0, $v0, $t3
+    
+    lb $v0, ($v0)
     
     sb $v0, ($t0)
     
