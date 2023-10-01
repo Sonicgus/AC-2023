@@ -1,12 +1,12 @@
 .data
-table:  .byte 0, 6, 91, 79, 102, 109, 125, 7, 127, 103
+table:  .byte 0, 6, 91, 79, 102, 109, 125, 7, 127, 103, 119 , 124, 57, 94, 121, 113
 
 .text
 .globl main
 
 main:
     li $t0, 0xFFFF0010
-    li $t1, 0x9
+    li $t1, 0xF
     la $t4, table
     
     add $t4, $t4, $t1
