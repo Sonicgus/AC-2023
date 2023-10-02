@@ -24,4 +24,4 @@ main:
 
     
     addi $t2, $t2, 1
-    bne $t2, 255, for
+    bne $t2, 256, for
