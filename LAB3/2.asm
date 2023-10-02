@@ -34,20 +34,19 @@ main:
     addi $t2, $t2, 1
     j contarl
     terminarcl:
-    mulu $t2,$t2,4
     
     andi $v0,$t1, 0x0F
     
     contarc:#contar colunas
     beq $v0, 1 , terminarc
     srl $v0, $v0, 1
-    addi $t2, $t2, 1
+    addi $t2, $t2, 4
     j contarc
-    terminarc:    
+    terminarc:
+    
+    
     add $t2, $t2, $a3
-    
     lbu $t2, ($t2)
-    
     sb $t2, ($a0)
     
     j start
