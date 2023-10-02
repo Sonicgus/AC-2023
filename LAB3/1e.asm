@@ -10,18 +10,19 @@ main:
     li $t2, 0x0
         
     for:
+    divu $t3, $t2, 10
     
-    andi $t3, $t2, 0x0F
-    add $t3, $t3, $t1
-    lbu $t3, 0($t3)
-    sb $t3, 0($t0)
-    
-    andi $t3, $t2, 0xF0
-    srl $t3, $t3, 4
     add $t3, $t3, $t1
     lbu $t3, 0($t3)
     sb $t3, 1($t0)
+    
+    mfhi $t3
+    
+    add $t3, $t3, $t1
+    lbu $t3, 0($t3)
+    
+    sb $t3, 0($t0)
 
     
     addi $t2, $t2, 1
-    bne $t2, 255, for
+    bne $t2, 100, for
