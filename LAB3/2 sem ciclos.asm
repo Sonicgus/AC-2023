@@ -23,8 +23,8 @@ main:
     sb $zero, ($a0) # caso nao tenha sido pressionado nenhuma tecla, desligar o ecra
     j start # verificar se alguma tecla foi pressionada desde o começo
     draw:
-    #começar pelas colunas   
-    srl $t2, $v0,5
+    #começar pelas colunas    
+    srl $t2, $t1,5
     
     bne $t2, 4, salta
     addi $t2, $t2,-1
