@@ -9,7 +9,6 @@ main:
     li $a1, 0xFFFF0012 # inserir bit a 1 no em qual das linhas queremos ler
     li $a2, 0xFFFF0014 # ler qual linha e coluna na qual foi obtida
     la $a3, table # endereço de memoria da tabela de simbolos
-    
           
     start:
     li $t0, 1 #começar na primeira linha index 0

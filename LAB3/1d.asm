@@ -16,8 +16,7 @@ main:
     lbu $t3, 0($t3)
     sb $t3, 0($t0)
     
-    andi $t3, $t2, 0xF0
-    srl $t3, $t3, 4
+    srl $t3, $t2, 4
     add $t3, $t3, $t1
     lbu $t3, 0($t3)
     sb $t3, 1($t0)
