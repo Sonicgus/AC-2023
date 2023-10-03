@@ -22,12 +22,12 @@ main:
     sb $zero, ($a0) # caso nao tenha sido pressionado nenhuma tecla, desligar o ecra
     j start # verificar se alguma tecla foi pressionada desde o começo
     draw:
-    #começar pelas linhas
+    #começar pelas colunas
     andi $v0,$t1, 0xF0
     
     srl $v0, $v0,4
     
-    li $t2, 0 #contar linhas
+    li $t2, 0 #contar colunas
     contarl:
     beq $v0, 1 , terminarcl
     srl $v0, $v0, 1
@@ -37,7 +37,7 @@ main:
     
     andi $v0,$t1, 0x0F
     
-    contarc:#contar colunas
+    contarc:#contar linhas
     beq $v0, 1 , terminarc
     srl $v0, $v0, 1
     addi $t2, $t2, 4
