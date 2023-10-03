@@ -10,8 +10,9 @@ main:
 	
 	for:
 	addi $t1, $t1, 1
+	sb $t2, ($t0)
 	sll $t2, $t2, 1
 	
-	sb $t2, ($t0)
 	
-	bne $t1, 7, for
+	
+	bne $t1, 8, for
