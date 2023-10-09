@@ -4,8 +4,6 @@ numero:	.word 0x10203040
 	.text
 	.globl main
 
-
-
 main:
 	la $t0, numero
 	lw $t1, ($t0)
@@ -19,7 +17,6 @@ main:
     	
     	li $v0, 10
     	syscall
-
 
 troca:
 	li $s0, 0 # counter
