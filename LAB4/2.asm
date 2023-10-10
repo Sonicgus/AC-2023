@@ -1,10 +1,8 @@
 	.data
-
 A:	.word -2
 B:	.word -1
 	.text
 	.globl main
-
 main:
 	la $a0, A
 	la $a1, B
@@ -14,7 +12,7 @@ main:
 	
 	jal absoluto
 	
-	add $a0, $v0, $zero
+	move $a0, $v0
 	li  $v0, 1
     	syscall
 	
