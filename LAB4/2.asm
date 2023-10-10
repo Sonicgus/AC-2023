@@ -7,8 +7,8 @@ main:
 	la $a0, A
 	la $a1, B
 	
-	lw $a0, ($a0)
-	lw $a1, ($a1)
+	lw $a0, 0($a0)
+	lw $a1, 0($a1)
 	
 	jal absoluto
 	

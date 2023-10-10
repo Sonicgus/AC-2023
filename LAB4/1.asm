@@ -6,7 +6,7 @@ numero:	.word 0x10203040
 
 main:
 	la $a0, numero
-	lw $a0, ($a0)
+	lw $a0, 0($a0)
 	
 	jal troca
 	

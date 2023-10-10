@@ -9,10 +9,10 @@ main:
 	jal funcao
 	
 	la $t1, comp
-	sw $v0, ($t1)
+	sw $v0, 0($t1)
 	
 	li  $v0, 1
-	lw $a0, ($t1)
+	lw $a0, 0($t1)
     	syscall
 	
 	li $v0, 10
@@ -22,7 +22,7 @@ funcao:
 	li $v0, 0 # resultado
 	move $s0, $a0 #copia
 for:
-	lbu $s1, ($s0)
+	lbu $s1, 0($s0)
 	beq $s1, 0, sair
 	addi $s0, $s0, 1
 	addi $v0, $v0, 1
