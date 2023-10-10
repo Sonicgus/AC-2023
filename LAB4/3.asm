@@ -16,7 +16,7 @@ main:
     	syscall
 
 funcao:
-	li $v0, 0 #count
+	li $v0, 0
 	move $s1, $a0
 for:
 	andi $s2, $s1, 1
