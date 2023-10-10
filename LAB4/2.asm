@@ -1,11 +1,16 @@
 	.data
+
+A:	.word -2
+B:	.word -1
 	.text
 	.globl main
 
 main:
-	li $a0, -2
-	li $a1, -1
+	la $a0, A
+	la $a1, B
 	
+	lw $a0, ($a0)
+	lw $a1, ($a1)
 	
 	jal absoluto
 	

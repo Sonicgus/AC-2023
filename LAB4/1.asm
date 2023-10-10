@@ -5,13 +5,12 @@ numero:	.word 0x10203040
 	.globl main
 
 main:
-	la $t0, numero
-	lw $t1, ($t0)
-	move $a0, $t1
+	la $a0, numero
+	lw $a0, ($a0)
 	
 	jal troca
 	
-	add $a0, $v0, $zero
+	move $a0, $v0
 	li  $v0, 34
     	syscall
     	

@@ -8,19 +8,23 @@ c2:	.byte 'u'
 .globl main
 main:
 	la $a0, str
-	lbu $a1, c1
-	lbu $a2, c2
+	la $t1, c1
+	la $t2, c2
+	
+	lbu $a1, ($t1)
+	lbu $a2, ($t2)
+	
 	jal funcao
+	
+	la $t0, ntrocas
+	sw $v0, ($t0)
 	
 	li  $v0, 4
     	syscall
-	
-	sw $v0, ntrocas
-	lw $a0, ntrocas
+    	
+	lw $a0, ($t0)
 	li  $v0, 1
     	syscall
-	
-	
 	
 	li $v0, 10
     	syscall

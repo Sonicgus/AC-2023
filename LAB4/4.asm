@@ -8,10 +8,11 @@ main:
 	
 	jal funcao
 	
-	sw $v0, comp
+	la $t1, comp
+	sw $v0, ($t1)
 	
 	li  $v0, 1
-	lw $a0, comp
+	lw $a0, ($t1)
     	syscall
 	
 	li $v0, 10

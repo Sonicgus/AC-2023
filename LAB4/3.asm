@@ -3,7 +3,8 @@
 .text
 .globl main
 main:
-	lw $a0, numero
+	la $a0, numero
+	lw $a0, ($a0)
 	
 	jal funcao
 	
