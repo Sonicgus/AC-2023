@@ -18,19 +18,16 @@ main:
     	syscall
 
 troca:
-	li $s0, 0 # counter
 	move $s1, $a0 # guardar valor numa variavel temporaria
 	li $v0, 0 # guardar valor final
 	
 for:
-	sll $v0, $v0, 8
 	andi $s2, $s1, 0xFF
-	add $v0, $v0, $s2
-	
 	srl $s1, $s1, 8
 	
-	addi $s0, $s0, 1
+	sll $v0, $v0, 8
+	add $v0, $v0, $s2
 	
-	bne $s0, 4, for
+	bne $s1, 0, for
 	
 	jr $ra
