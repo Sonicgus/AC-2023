@@ -8,7 +8,7 @@ main:
 	
 	jal funcao
 	
-	add $a0, $v0, $zero
+	move $a0, $v0
 	li  $v0, 1
     	syscall
 	
@@ -16,16 +16,15 @@ main:
     	syscall
 
 funcao:
-	li $s0, 0 #count
+	li $v0, 0 #count
 	move $s1, $a0
 for:
-	beq $s1, 0, sair	
-	andi $s2,$s1, 1
+	andi $s2, $s1, 1
+	
+	xor $v0, $v0, $s2
+	
 	srl $s1, $s1, 1
 	
-	bne $s2, 1, for
-	addi $s0, $s0, 1
-	j for
-sair:
-	andi $v0, $s0, 1
+	bne $s1, 0, for
+	
 	jr $ra
