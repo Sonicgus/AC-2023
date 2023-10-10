@@ -1,7 +1,7 @@
-.data
-	numero: .word 3
-.text
-.globl main
+	.data
+numero: .word 3
+	.text
+	.globl main
 main:
 	la $a0, numero
 	lw $a0, 0($a0)

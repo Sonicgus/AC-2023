@@ -1,8 +1,8 @@
-.data
-	str: .asciiz "Uma frase!"
-	comp: .word 0
-.text
-.globl main
+	.data
+str:	.asciiz "Uma frase!"
+comp:	.word 0
+	.text
+	.globl main
 main:
 	la $a0, str
 	

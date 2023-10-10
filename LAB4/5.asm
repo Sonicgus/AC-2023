@@ -1,11 +1,10 @@
-.data
-str: .asciiz "socorro"
-ntrocas: .word 0
+	.data
+str: 	.asciiz "socorro"
+ntrocas:	.word 0
 c1:	.byte 'o'
 c2:	.byte 'u'
-	
-.text
-.globl main
+	.text
+	.globl main
 main:
 	la $a0, str
 	la $t1, c1
