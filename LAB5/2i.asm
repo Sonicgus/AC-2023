@@ -5,8 +5,8 @@ resultado:	.word 0
 	.text
 	.globl main
 main:
-	la $a0 tab
-	la $a1 n
+	la $a0, tab
+	la $a1, n
 	
 	jal oddnumber
 	
