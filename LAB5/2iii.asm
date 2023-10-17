@@ -22,7 +22,7 @@ for:
 	bgt $s1, 0x7A, salta
 	
 	addi $s1, $s1, -32
-	sb $s1, ($s0)
+	sb $s1, 0($s0)
 	
 salta:
 	addi $s0, $s0, 1
