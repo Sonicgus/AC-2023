@@ -36,12 +36,10 @@ oddnumber:
 for:
 	lw $s2, ($s1)
 	
-	andi $s3, $s2, 1
-	bne $s3, 1, salta
-	xori $s2, $s2, 1
+	andi $s2, $s2, 0xFFFFFFFE
 	sw $s2, ($s1)
 	addi $v0, $v0, 1
-salta:
+	
 	addi $s1, $s1, 4
 	addi $s0, $s0, -1
 	bne $s0, 0, for
