@@ -17,13 +17,13 @@ main:
 	
 	lw $t0, 0($a1)
 for2:
+	li $a0, 10 #print newline character
+	li  $v0, 11
+    	syscall
+
 	lw $a0, 0($t5)
 	
-	li  $v0, 34
-    	syscall
-    	
-    	li $a0, 10 #print newline character
-	li  $v0, 11
+	li  $v0, 1
     	syscall
     	
     	addi $t0, $t0, -1
