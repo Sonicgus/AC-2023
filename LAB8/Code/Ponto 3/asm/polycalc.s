@@ -9,7 +9,7 @@ polycalc:
 	# buscar a4
 	lw $t6, 16($sp)
 
-	addi $t0, $a0, $a1
+	add $t0, $a0, $a1
 	mul $t1, $a3, $t6
 
 	li $t2, 3
