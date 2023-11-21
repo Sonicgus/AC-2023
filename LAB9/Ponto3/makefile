@@ -1,11 +1,11 @@
 C = gcc
-OBJS = main_1.o mandelbrot.o
+OBJS = main.o bin_img.o
 
-main_1: $(OBJS)
-	$(C) -o main_1 $(OBJS)
-main_1.o: main_1.c
-	$(C) -c main_1.c
-mandelbrot.o: mandelbrot.s
-	$(C) -c mandelbrot.s
+main: $(OBJS)
+	$(C) -o main $(OBJS)
+main.o: main.c
+	$(C) -c main.c
+bin_img.o: bin_img.s
+	$(C) -c bin_img.s
 clear: $(OBJS)
 	rm $(OBJS)
