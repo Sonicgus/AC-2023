@@ -5,7 +5,7 @@
 
 # procura(int *tab, int low, int high, int num)
 
-# t0 mid
+# t0 index mid
 # t1 elemento mid
 procura:
 	addiu $sp, $sp, -4
@@ -31,9 +31,11 @@ procura:
 	jal procura
 	
 	j final
+
 igual:
 	move $v0, $t0
 	j final
+
 menor:
 	addi $t0, $t0, -1
 	move $a2, $t0

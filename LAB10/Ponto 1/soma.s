@@ -20,9 +20,6 @@ soma:
 	lw $a0, 4($sp)
 
 	add $v0, $v0, $a0
-	
-	#---------------
-	
 
 final:
 	lw $ra, 0 ($sp)

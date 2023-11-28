@@ -14,11 +14,11 @@ for2:
 	
 	addi $t0, $t0, -4
 
-	lw $t1, ($a0)
-	lw $t2, ($t0)
+	lw $t1, 0($a0)
+	lw $t2, 0($t0)
 
-	sw $t2, ($a0)
-	sw $t1, ($t0)
+	sw $t2, 0($a0)
+	sw $t1, 0($t0)
 	
 
 	addi $a0, $a0, 4
@@ -43,11 +43,11 @@ manipula_tabela:
 for:
 	beq $0, $t1, sair
 	
-	lw $t2, ($t0)
+	lw $t2, 0($t0)
 
 	mul $t2, $t2, 2
 
-	sw $t2, ($t0)
+	sw $t2, 0($t0)
 	addi $t0, $t0, 4
 	addi $t1, $t1, -1
 	j for

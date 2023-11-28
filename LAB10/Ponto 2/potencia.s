@@ -13,8 +13,6 @@ potencia:
 
 	addi $a1, $a1, -1
 
-	
-
 	jal potencia
 
 	mul $v0, $v0, $a0

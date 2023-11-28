@@ -34,12 +34,10 @@ bin_img:
 
 	jal media
 
-	lw $ra, 0($sp)
+	
 	lw $a0, 4($sp)
 	lw $a1, 8($sp)
 	lw $a2, 12($sp)
-
-	addiu $sp, $sp, 16
 
 	mul $t0, $a1, $a2
 
@@ -62,5 +60,7 @@ salta:
 	j for1	
 	
 fim:
-		jr	$ra
+	lw $ra, 0($sp)
+	addiu $sp, $sp, 16
+	jr	$ra
 

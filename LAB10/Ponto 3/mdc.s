@@ -20,8 +20,6 @@ mdc:
 
 	move $a0, $t0
 
-	
-
 	jal mdc
 
 final:
