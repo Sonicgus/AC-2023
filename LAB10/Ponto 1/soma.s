@@ -4,13 +4,13 @@
 	.globl	soma
 
 soma:
+	addiu $sp, $sp, -8
+	sw $ra, 0($sp)
+
 	move $v0, $a0
 
 	beq $a0, 0, final
 
-	addiu $sp, $sp, -8
-
-	sw $ra, 0($sp)
 	sw $a0, 4($sp)
 
 	addi $a0, $a0, -1
@@ -22,8 +22,9 @@ soma:
 	add $v0, $v0, $a0
 	
 	#---------------
-	lw $ra, 0 ($sp)
-	addiu $sp, $sp, 8
+	
 
 final:
+	lw $ra, 0 ($sp)
+	addiu $sp, $sp, 8
 	jr	$ra
