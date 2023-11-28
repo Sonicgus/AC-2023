@@ -15,7 +15,6 @@ mdc:
 	move $t0, $a1
 
 	div $t1, $a0, $a1
-
 	mfhi $a1
 
 	move $a0, $t0
@@ -23,7 +22,7 @@ mdc:
 	jal mdc
 
 final:
-	lw $ra, 0 ($sp)
+	lw $ra, 0($sp)
 	addiu $sp, $sp, 4
 	
 	jr	$ra

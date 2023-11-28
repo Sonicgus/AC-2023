@@ -22,6 +22,7 @@ soma:
 	add $v0, $v0, $a0
 
 final:
-	lw $ra, 0 ($sp)
+	lw $ra, 0($sp)
 	addiu $sp, $sp, 8
+
 	jr	$ra

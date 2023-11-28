@@ -4,13 +4,12 @@
 	.globl	procura
 
 # procura(int *tab, int low, int high, int num)
-
-# t0 index mid
-# t1 elemento mid
 procura:
 	addiu $sp, $sp, -4
 	sw $ra, 0($sp)	
 
+	# t0 index mid
+	# t1 elemento mid
 	add $t0, $a1, $a2
 	sra $t0, $t0, 1
 	sll $t2, $t0, 2
@@ -21,7 +20,6 @@ procura:
 
 	beq $a3, $t1, igual
 	beq $a1, $a2, naoexiste
-
 	blt $a3, $t1, menor
 
 	#else: maior
@@ -34,6 +32,7 @@ procura:
 
 igual:
 	move $v0, $t0
+
 	j final
 
 menor:

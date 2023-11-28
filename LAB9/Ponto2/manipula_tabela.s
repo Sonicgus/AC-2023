@@ -20,7 +20,6 @@ for2:
 	sw $t2, 0($a0)
 	sw $t1, 0($t0)
 	
-
 	addi $a0, $a0, 4
 	
 	j for2
@@ -30,15 +29,11 @@ sair2:
 
 
 manipula_tabela:
-
-	# Codigo da função aqui
-	# a0 array / a1 tamanho
-	move $t0, $a0
-	move $t1, $a1
-	
-
 	addiu $sp, $sp, -4
 	sw $ra, 0($sp)
+
+	move $t0, $a0
+	move $t1, $a1
 
 for:
 	beq $0, $t1, sair
@@ -50,13 +45,13 @@ for:
 	sw $t2, 0($t0)
 	addi $t0, $t0, 4
 	addi $t1, $t1, -1
+
 	j for
 
 sair:
-
 	jal inverte_tabela
 
-	lw $ra, 0 ($sp)
+	lw $ra, 0($sp)
 	addiu $sp, $sp, 4
 
 	jr	$ra
