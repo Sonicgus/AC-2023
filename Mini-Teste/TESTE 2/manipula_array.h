@@ -1,0 +1,1 @@
+void manipula_array(int *table, int size);
